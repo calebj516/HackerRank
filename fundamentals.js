@@ -9,43 +9,38 @@
 // If the first character in string s is in the set {h,j,k,l,m}, then return C.
 // If the first character in string s is in the set {n,p,q,r,s,t,v,w,x,y,z}, then return D.
 
-const getLetter = (s) => {
-  console.log(s);
-  switch (s.charAt(0)) {
-    case "a":
-    case "e":
-    case "i":
-    case "o":
-    case "u":
-      console.log("A");
+function getLetter(s) {
+  let letter = s[0];
+  let result;
+  let A = ["a", "e", "i", "o", "u"];
+  let B = ["b", "c", "d", "f", "g"];
+  let C = ["h", "j", "k", "l", "m"];
+  let D = ["n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+  console.log(letter);
+  switch (letter) {
+    case A.includes(letter):
+      result = "A";
+      console.log(result);
       break;
-    case "b":
-    case "c":
-    case "d":
-    case "f":
-    case "g":
-      console.log("B");
+    case B.includes(letter):
+      result = "B";
+      console.log(result);
       break;
-    case "h":
-    case "j":
-    case "k":
-    case "l":
-    case "m":
-      console.log("C");
+    case C.includes(letter):
+      result = "C";
+      console.log(result);
       break;
-    case "n":
-    case "p":
-    case "q":
-    case "r":
-    case "s":
-    case "t":
-    case "w":
-    case "x":
-    case "y":
-    case "z":
-      console.log("D");
+    case D.includes(letter):
+      result = "D";
+      console.log(result);
       break;
     default:
-      console.log("Please try again");
+      console.log("Please try again.");
   }
-};
+  console.log(result);
+  return result;
+}
+
+let s = "caleb";
+let t = getLetter(s);
+console.log(t);
