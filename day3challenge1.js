@@ -1,3 +1,5 @@
+// Day 3: Arrays
+
 function getThirdLargest(nums) {
   // First, loop through the array to determine the max value
   let max1 = 0;
