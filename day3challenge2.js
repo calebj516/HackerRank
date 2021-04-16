@@ -19,6 +19,7 @@ const reverseString = (s) => {
     console.log(joinedArr);
   } catch (e) {
     console.log(e.message);
+  } finally {
     console.log(s);
   }
 };
