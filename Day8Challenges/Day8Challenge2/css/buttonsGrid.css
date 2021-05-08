@@ -1,0 +1,22 @@
+/* Styling. The document's elements must have the following styles:
+The width of btns is 75%, relative to the document body's width.
+Each button (i.e., btn1 through btn9) satisfies the following:
+The width is 30%, relative to its container width.
+The height is 48px.
+The font-size is 24px. */
+
+/* Style for the 'buttonContainer' class */
+.buttonContainer {
+  width: 75%;
+}
+/* Style for 'buttonClass' elements inside a 'buttonContainer' 
+
+   We can think of the '>' combinator as a sort of binary operator:
+   the syntax 'parent > child' specifies that we're selecting ONLY 
+   elements of type 'child' that are within elements of type 'parent'. 
+*/
+.buttonContainer > .buttonClass {
+  width: 30%;
+  height: 48px;
+  font-size: 24px;
+}
