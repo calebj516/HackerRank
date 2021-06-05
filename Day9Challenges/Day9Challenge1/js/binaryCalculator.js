@@ -54,12 +54,22 @@ const divRes = () => {
 
 const evalRes = () => {
   if (res.innerHTML) {
-    let leftOperand = resArr.slice(0, resArr.indexOf(operator)).join(""); // takes result array from start up to the operator
-    let rightOperand = resArr
-      .slice(resArr.indexOf(operator) + 1, resArr.length)
-      .join(""); // takes result array from the position after the operator to the end of the array
-    let base10Res = eval(parseInt(leftOperand, 2) + parseInt(rightOperand, 2));
-    let binaryRes = base10Res.toString(2);
-    res.innerHTML = binaryRes;
+    let result = eval(res.innerHTML);
+    console.log(result);
+    // let leftOperand = resArr.slice(0, resArr.indexOf(operator)).join(""); // takes result array from start up to the operator
+    // let rightOperand = resArr
+    //   .slice(resArr.indexOf(operator) + 1, resArr.length)
+    //   .join(""); // takes result array from the position after the operator to the end of the array
+    // let base10Res = eval(
+    //   `${parseInt(leftOperand, 2)}${operator}${parseInt(rightOperand, 2)}`
+    // );
+    // if (operator === "/") {
+    //   let x = leftOperand / rightOperand;
+    //   base10Res = Math.floor(x);
+    //   let binaryRes = base10Res.toString(2);
+    //   res.innerHTML = binaryRes;
+    // }
+    // let binaryRes = base10Res.toString(2);
+    // res.innerHTML = binaryRes;
   }
 };
